@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performax Coffee — Restore Your Stamina, Confidence &amp; Performance</title>
+    <meta name="description" content="Performax Coffee is the NAFDAC-approved herbal coffee that restores stamina, hardens erections, and puts you back in control. Free delivery across Nigeria.">
+    <meta property="og:title" content="Performax Coffee — Restore Your Stamina, Confidence & Performance">
+    <meta property="og:description" content="NAFDAC-approved herbal coffee for men. Restore stamina, confidence, and performance starting from your very first cup.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0D0D0D;
+            --bg-secondary: #1A1A1A;
+            --accent-gold: #C9973A;
+            --text-primary: #F5F5F5;
+            --text-muted: #A0A0A0;
+            --whatsapp-green: #25D366;
+            --urgency-bg: #1A0A0A;
+            --font-headline: 'Playfair Display', Georgia, serif;
+            --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ============================================
+           UTILITY & ANIMATION CLASSES
+           ============================================ */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-headline {
+            font-family: var(--font-headline);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .section-subtext {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* CTA Buttons */
+        .cta-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 18px 32px;
+            background: var(--accent-gold);
+            color: #000;
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .cta-btn:hover {
+            background: #d4a63f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 151, 58, 0.35);
+        }
+
+        .cta-btn:active {
+            transform: translateY(0);
+        }
+
+        .cta-btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: #fff;
+        }
+
+        .cta-btn-whatsapp:hover {
+            background: #20bd5a;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+        }
+
+        /* ============================================
+           SECTION 1 — STICKY TOP BAR
+           ============================================ */
+        .top-bar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid rgba(201, 151, 58, 0.2);
+            padding: 10px 0;
+        }
+
+        .top-bar p {
+            text-align: center;
+            font-size: 0.82rem;
+            color: var(--accent-gold);
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* ============================================
+           SECTION 2 — HERO
+           ============================================ */
+        .hero {
+            padding: 50px 0 60px;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-preheadline {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 16px;
+        }
+
+        .hero-headline {
+            font-family: var(--font-headline);
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .hero-subheadline {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            margin-bottom: 32px;
+        }
+
+        .trust-badges {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .trust-badge span:first-child {
+            color: var(--accent-gold);
+            font-size: 1rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .hero-image .image-placeholder {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background: var(--bg-secondary);
+            border: 2px dashed rgba(201, 151, 58, 0.4);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ============================================
+           SECTION 3 — PAIN AGITATION
+           ============================================ */
+        .pain-section {
+            background: var(--bg-secondary);
+        }
+
+        .pain-list {
+            list-style: none;
+            max-width: 650px;
+            margin: 0 auto 32px;
+        }
+
+        .pain-list li {
+            padding: 12px 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+        }
+
+        .pain-list li:last-child {
+            border-bottom: none;
+        }
+
+        .pain-closing {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .pain-transition {
+            text-align: center;
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* ============================================
+           SECTION 4 — PRODUCT INTRODUCTION
+           ============================================ */
+        .product-intro-text {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .product-intro-text p {
+            margin-bottom: 16px;
+        }
+
+        .product-intro-image {
+            max-width: 350px;
+            margin: 0 auto 48px;
+        }
+
+        .benefit-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .benefit-card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(201, 151, 58, 0.15);
+            border-radius: 12px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(201, 151, 58, 0.5);
+        }
+
+        .benefit-card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card-title {
+            font-family: var(--font-headline);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .benefit-card-desc {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           SECTION 5 — HOW IT WORKS
+           ============================================ */
+        .how-it-works {
+            background: var(--bg-secondary);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+            padding: 32px 20px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+            color: #000;
+            font-family: var(--font-headline);
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+
+        .step-title {
+            font-family: var(--font-headline);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .step-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        /* ============================================
+           SECTION 6 — VIDEO TESTIMONIALS
+           ============================================ */
+        .video-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+
+        .video-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-wrapper video,
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-card-body {
+            padding: 20px;
+        }
+
+        .video-card-name {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+        }
+
+        .video-card-quote {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* ============================================
+           SECTION 7 — SCREENSHOT REVIEWS
+           ============================================ */
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .review-screenshot {
+            border: 2px solid rgba(201, 151, 58, 0.4);
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 9 / 16;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 12px;
+        }
+
+        .review-screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ============================================
+           SECTION 8 — SOCIAL PROOF COUNTER BAR
+           ============================================ */
+        .counter-bar {
+            background: var(--accent-gold);
+            padding: 40px 0;
+        }
+
+        .counter-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            text-align: center;
+        }
+
+        .counter-item-number {
+            font-family: var(--font-headline);
+            font-size: 2rem;
+            font-weight: 900;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        .counter-item-label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.7);
+            margin-top: 4px;
+        }
+
+        /* ============================================
+           SECTION 9 — PRICING
+           ============================================ */
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 0 40px rgba(201, 151, 58, 0.15);
+        }
+
+        .pricing-popular-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 20px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            background: rgba(201, 151, 58, 0.15);
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-original {
+            font-size: 1rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            margin-bottom: 4px;
+        }
+
+        .pricing-sale {
+            font-family: var(--font-headline);
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .pricing-saving {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 28px;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: '✅';
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ============================================
+           SECTION 10 — FREE BONUS
+           ============================================ */
+        .bonus-section {
+            background: var(--bg-secondary);
+        }
+
+        .bonus-badge {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: #000;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+
+        .bonus-content {
+            text-align: center;
+        }
+
+        .bonus-headline {
+            font-family: var(--font-headline);
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .bonus-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 24px;
+        }
+
+        .bonus-image {
+            max-width: 280px;
+            margin: 0 auto 32px;
+        }
+
+        .bonus-list {
+            list-style: none;
+            max-width: 550px;
+            margin: 0 auto 32px;
+            text-align: left;
+        }
+
+        .bonus-list li {
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .bonus-closing {
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        /* ============================================
+           SECTION 11 — GUARANTEE
+           ============================================ */
+        .guarantee-content {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .guarantee-content p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .guarantee-image {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        /* ============================================
+           SECTION 12 — URGENCY
+           ============================================ */
+        .urgency-section {
+            background: var(--urgency-bg);
+            border-top: 1px solid rgba(255, 50, 50, 0.1);
+            border-bottom: 1px solid rgba(255, 50, 50, 0.1);
+        }
+
+        .urgency-content {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .urgency-headline {
+            font-family: var(--font-headline);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .urgency-content p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        /* ============================================
+           SECTION 13 — FAQ
+           ============================================ */
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--accent-gold);
+        }
+
+        .faq-icon {
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            padding-bottom: 20px;
+        }
+
+        .faq-answer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           SECTION 14 — FINAL CTA
+           ============================================ */
+        .final-cta {
+            text-align: center;
+        }
+
+        .final-cta .section-subtext {
+            margin-bottom: 32px;
+        }
+
+        .final-cta .cta-btn {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* ============================================
+           SECTION 15 — FOOTER
+           ============================================ */
+        .site-footer {
+            background: var(--bg-secondary);
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-text p {
+            margin-bottom: 10px;
+        }
+
+        .footer-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ============================================
+           ORDER FORM MODAL
+           ============================================ */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+            padding: 16px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(201, 151, 58, 0.25);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 520px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 32px 24px;
+            position: relative;
+            transform: translateY(30px) scale(0.97);
+            transition: transform 0.35s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: rgba(201, 151, 58, 0.3);
+            border-radius: 3px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease, color 0.2s ease;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--text-primary);
+        }
+
+        .modal-title {
+            font-family: var(--font-headline);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            padding-right: 40px;
+        }
+
+        .modal-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .form-label .required {
+            color: #e74c3c;
+            margin-left: 2px;
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(201, 151, 58, 0.15);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-select {
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23A0A0A0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        .form-select option {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        /* Package radio cards */
+        .package-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .package-radio {
+            display: none;
+        }
+
+        .package-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: border-color 0.25s ease, background 0.25s ease;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .package-label:hover {
+            border-color: rgba(201, 151, 58, 0.4);
+            background: rgba(201, 151, 58, 0.05);
+        }
+
+        .package-radio:checked + .package-label {
+            border-color: var(--accent-gold);
+            background: rgba(201, 151, 58, 0.1);
+            color: var(--text-primary);
+        }
+
+        .package-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            flex-shrink: 0;
+            position: relative;
+            transition: border-color 0.25s ease;
+        }
+
+        .package-radio:checked + .package-label .package-dot {
+            border-color: var(--accent-gold);
+        }
+
+        .package-radio:checked + .package-label .package-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+        }
+
+        .package-label-text {
+            flex: 1;
+        }
+
+        .package-label-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.92rem;
+        }
+
+        .package-label-price {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            padding: 16px 24px;
+            background: var(--accent-gold);
+            color: #000;
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            margin-top: 8px;
+        }
+
+        .form-submit-btn:hover {
+            background: #d4a63f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 151, 58, 0.35);
+        }
+
+        .form-submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .form-submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .form-trust-line {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 14px;
+        }
+
+        /* Success state */
+        .form-success {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .form-success-icon {
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+        }
+
+        .form-success-title {
+            font-family: var(--font-headline);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .form-success-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .form-success-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: var(--accent-gold);
+            color: #000;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .form-success-btn:hover {
+            background: #d4a63f;
+        }
+
+        /* ============================================
+           DESKTOP BREAKPOINTS
+           ============================================ */
+        @media (min-width: 768px) {
+            .section-headline {
+                font-size: 2.2rem;
+            }
+
+            .hero-headline {
+                font-size: 2.6rem;
+            }
+
+            .trust-badges {
+                grid-template-columns: repeat(4, auto);
+                justify-content: center;
+                gap: 24px;
+            }
+
+            .benefit-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+
+            .video-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .review-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .counter-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .counter-item-number {
+                font-size: 2.5rem;
+            }
+
+            .cta-btn {
+                width: auto;
+                min-width: 360px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-grid {
+                flex-direction: row;
+                text-align: left;
+                justify-content: space-between;
+            }
+
+            .hero-content {
+                text-align: left;
+                flex: 1;
+                max-width: 560px;
+            }
+
+            .hero-headline {
+                font-size: 2.9rem;
+            }
+
+            .hero-subheadline {
+                margin-left: 0;
+            }
+
+            .hero-image {
+                flex-shrink: 0;
+                max-width: 420px;
+            }
+
+            .trust-badges {
+                justify-content: flex-start;
+            }
+
+            .pricing-cards {
+                grid-template-columns: repeat(3, 1fr);
+                align-items: stretch;
+            }
+
+            .pricing-card.featured {
+                transform: translateY(-8px);
+                box-shadow: 0 0 50px rgba(201, 151, 58, 0.2);
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-12px);
+                box-shadow: 0 0 60px rgba(201, 151, 58, 0.3);
+            }
+
+            .section-headline {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         SECTION 1 — STICKY TOP BAR
+         ============================================ -->
+    <div class="top-bar" id="top-bar">
+        <div class="container">
+            <p>🚚 FREE Delivery Across Nigeria · Pay On Delivery · 100% Money-Back Guarantee</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SECTION 2 — HERO
+         ============================================ -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content animate-on-scroll">
+                    <p class="hero-preheadline">FOR MEN WHO WANT THEIR CONFIDENCE BACK</p>
+                    <h1 class="hero-headline">Your Woman Is Tired Of Excuses.<br>It's Time To Give Her A Reason To Stay.</h1>
+                    <p class="hero-subheadline">Performax Coffee is the NAFDAC-approved herbal coffee that restores your stamina, hardens your erections, and puts you back in control — starting from your very first cup.</p>
+                    <div class="hero-cta">
+                        <a href="#pricing" class="cta-btn scroll-to-pricing">☕ I Want To Perform Again — Show Me The Packages</a>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="trust-badge"><span>✅</span> NAFDAC Approved</div>
+                        <div class="trust-badge"><span>✅</span> 100% Natural Ingredients</div>
+                        <div class="trust-badge"><span>✅</span> Pay On Delivery</div>
+                        <div class="trust-badge"><span>✅</span> Free Doorstep Delivery</div>
+                    </div>
+                </div>
+                <div class="hero-image animate-on-scroll">
+                    <div class="image-placeholder">[HERO_PRODUCT_IMAGE]<br><small>Replace with product image</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 3 — PAIN AGITATION
+         ============================================ -->
+    <section class="pain-section section-padding" id="pain">
+        <div class="container">
+            <h2 class="section-headline animate-on-scroll">If Any Of This Sounds Familiar, Keep Reading...</h2>
+            <ul class="pain-list animate-on-scroll">
+                <li>❌ You finish in 2 minutes and pretend it didn't happen</li>
+                <li>❌ Your partner has stopped initiating because she knows what to expect</li>
+                <li>❌ You avoid intimacy altogether to dodge the shame</li>
+                <li>❌ You've tried "agbo", supplements, and vitamins — nothing lasted</li>
+                <li>❌ Deep down, you're terrified she'll find satisfaction somewhere else</li>
+                <li>❌ You feel like less of a man than you used to be</li>
+            </ul>
+            <p class="pain-closing animate-on-scroll"><em>You didn't choose this. But you can choose what happens next.</em></p>
+            <p class="pain-transition animate-on-scroll">Performax Coffee was made for exactly this moment.</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 4 — PRODUCT INTRODUCTION
+         ============================================ -->
+    <section class="section-padding" id="product">
+        <div class="container">
+            <h2 class="section-headline animate-on-scroll">What Is Performax Coffee?</h2>
+            <div class="product-intro-text animate-on-scroll">
+                <p>Performax Coffee is not a drug. It's not a quick fix that wrecks your body. It's a premium blend of natural herbs — including Korean Ginseng, Maca Root, and Tongkat Ali — scientifically known to boost testosterone, increase blood flow, and restore sexual stamina in men.</p>
+                <p>It looks like coffee. It tastes like coffee. But it works like nothing you've ever tried.</p>
+                <p>Within 3 hours of your first cup, you'll feel the difference. Within 2–4 weeks of consistent use, your partner will notice the difference.</p>
+            </div>
+            <div class="product-intro-image animate-on-scroll">
+                <div class="image-placeholder">[PRODUCT_DETAIL_IMAGE]<br><small>Replace with product detail image</small></div>
+            </div>
+            <div class="benefit-cards">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-card-icon">🔥</div>
+                    <div class="benefit-card-title">Harder, Stronger Erections</div>
+                    <p class="benefit-card-desc">Better blood flow means firmer performance — every single time</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-card-icon">⚡</div>
+                    <div class="benefit-card-title">Stamina That Lasts</div>
+                    <p class="benefit-card-desc">Go longer without losing steam. No more counting minutes</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-card-icon">💪</div>
+                    <div class="benefit-card-title">Rebuilt Confidence</div>
+                    <p class="benefit-card-desc">Walk into the bedroom knowing you've got this</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 5 — HOW IT WORKS
+         ============================================ -->
+    <section class="how-it-works section-padding" id="how-it-works">
+        <div class="container">
+            <h2 class="section-headline animate-on-scroll">How Performax Coffee Works</h2>
+            <div class="steps-grid">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Brew It</div>
+                    <p class="step-desc">Mix one sachet into hot water (150–200ml). Stir and drink like your regular morning coffee.</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Feel It</div>
+                    <p class="step-desc">Within 3 hours, you'll notice increased energy, sharper focus, and improved blood flow to where it matters.</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Own It</div>
+                    <p class="step-desc">Use consistently (2 sachets per week) and watch your stamina, confidence, and performance rebuild week after week.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 6 — VIDEO TESTIMONIALS
+         ============================================ -->
+    <section class="section-padding" id="testimonials">
+        <div class="container">
+            <h2 class="section-headline animate-on-scroll">Real Men. Real Results. No Scripts.</h2>
+            <p class="section-subtext animate-on-scroll">These are customers who ordered, used it, and couldn't keep quiet about what happened.</p>
+            <div class="video-cards">
+                <!-- Video Card 1 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-wrapper">
+                        <!-- Replace with: <video controls playsinline src="[VIDEO_LINK_1]" poster="[THUMBNAIL_1]"></video> -->
+                        <!-- Or for YouTube: <iframe src="[VIDEO_LINK_1]" frameborder="0" allowfullscreen></iframe> -->
+                        [VIDEO_LINK_1] / [THUMBNAIL_1]
+                    </div>
+                    <div class="video-card-body">
+                        <div class="video-card-name">Mr. Adekule</div>
+                        <p class="video-card-quote">"Wonderful coffee — that's what we're supposed to call it, because..."</p>
+                    </div>
+                </div>
+                <!-- Video Card 2 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-wrapper">
+                        [VIDEO_LINK_2] / [THUMBNAIL_2]
+                    </div>
+                    <div class="video-card-body">
+                        <div class="video-card-name">Mr. Abdulwahab Yusuf</div>
+                        <p class="video-card-quote">"I can vouch for it. It genuinely works."</p>
+                    </div>
+                </div>
+                <!-- Video Card 3 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-wrapper">
+                        [VIDEO_LINK_3] / [THUMBNAIL_3]
+                    </div>
+                    <div class="video-card-body">
+                        <div class="video-card-name">Mrs. Oluwatosin Afolayan</div>
+                        <p class="video-card-quote">"I bought it for my husband. It saved our marriage."</p>
+                    </div>
+                </div>
+                <!-- Video Card 4 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-wrapper">
+                        [VIDEO_LINK_4] / [THUMBNAIL_4]
+                    </div>
+                    <div class="video-card-body">
+                        <div class="video-card-name">Ibrahim Babatunde</div>
+                        <p class="video-card-quote">"Now I dey spend 15 minutes. Your babe go dey beg you — small small."</p>
+                    </div>
+                </div>
+                <!-- Video Card 5 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-wrapper">
+                        [VIDEO_LINK_5] / [THUMBNAIL_5]
+                    </div>
+                    <div class="video-card-body">
+                        <div class="video-card-name">Biodun Adeleke</div>
+                        <p class="video-card-quote">"When I used it for the first time... I couldn't believe it."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 7 — SCREENSHOT REVIEWS
+         ============================================ -->
+    <section class="section-padding" id="reviews">
+        <div class="container">
+            <h2 class="section-headline animate-on-scroll">What Customers Are Saying Online</h2>
+            <div class="review-grid animate-on-scroll">
+                <div class="review-screenshot">[REVIEW_SCREENSHOT_1]<br><small>Replace with screenshot</small></div>
+                <div class="review-screenshot">[REVIEW_SCREENSHOT_2]<br><small>Replace with screenshot</small></div>
+                <div class="review-screenshot">[REVIEW_SCREENSHOT_3]<br><small>Replace with screenshot</small></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 8 — SOCIAL PROOF COUNTER BAR
+         ============================================ -->
+    <section class="counter-bar" id="counter-bar">
+        <div class="container">
+            <div class="counter-grid">
+                <div class="counter-item animate-on-scroll">
+                    <div class="counter-item-number" data-target="7145">0</div>
+                    <div class="counter-item-label">Men Trust Performax</div>
+                </div>
+                <div class="counter-item animate-on-scroll">
+                    <div class="counter-item-number" data-target="19863">0</div>
+                    <div class="counter-item-label">Packs Sold</div>
+                </div>
+                <div class="counter-item animate-on-scroll">
+                    <div class="counter-item-number" data-target="34">0</div>
+                    <div class="counter-item-label">States in Nigeria</div>
+                </div>
+                <div class="counter-item animate-on-scroll">
+                    <div class="counter-item-number" data-target="5">0</div>
+                    <div class="counter-item-label">Countries Globally</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 9 — PRICING / PACKAGES
+         ============================================ -->
+    <section class="section-padding" id="pricing">
+        <div class="container">
+            <h2 class="section-headline animate-on-scroll">Choose Your Package</h2>
+            <p class="section-subtext animate-on-scroll">The longer your supply, the more you save — and the better your results.</p>
+            <div class="pricing-cards">
+
+                <!-- Package 1 — Regular Offer -->
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-badge">1 PACK</div>
+                    <div class="pricing-original">₦44,250</div>
+                    <div class="pricing-sale">₦39,500</div>
+                    <div class="pricing-saving">33% OFF</div>
+                    <ul class="pricing-features">
+                        <li>1 discounted pack</li>
+                        <li>Free discreet doorstep delivery</li>
+                        <li>Pay on delivery</li>
+                        <li>Lasts 5 weeks (10 sachets)</li>
+                        <li>100% money-back guarantee</li>
+                    </ul>
+                    <button class="cta-btn open-order-form" data-package="regular">Order 1 Pack Now</button>
+                </div>
+
+                <!-- Package 2 — Double Deal (MOST POPULAR) -->
+                <div class="pricing-card featured animate-on-scroll">
+                    <div class="pricing-popular-badge">MOST POPULAR</div>
+                    <div class="pricing-badge">2 PACKS</div>
+                    <div class="pricing-original">₦88,500</div>
+                    <div class="pricing-sale">₦59,500</div>
+                    <div class="pricing-saving">You Save ₦19,000</div>
+                    <ul class="pricing-features">
+                        <li>2 packs</li>
+                        <li>Free discreet doorstep delivery</li>
+                        <li>Pay on delivery</li>
+                        <li>Lasts 2 months and 2 weeks</li>
+                        <li>100% money-back guarantee</li>
+                    </ul>
+                    <button class="cta-btn open-order-form" data-package="double">Order 2 Packs Now</button>
+                </div>
+
+                <!-- Package 3 — Mega Saver -->
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-badge">BUY 3 GET 1 FREE</div>
+                    <div class="pricing-original">₦132,750</div>
+                    <div class="pricing-sale">₦92,500</div>
+                    <div class="pricing-saving">You Save ₦40,250</div>
+                    <ul class="pricing-features">
+                        <li>Buy 3 packs, get 1 FREE</li>
+                        <li>Free discreet doorstep delivery</li>
+                        <li>Pay on delivery</li>
+                        <li>Lasts 5 months</li>
+                        <li>100% money-back guarantee</li>
+                    </ul>
+                    <button class="cta-btn open-order-form" data-package="mega">Order Mega Saver Now</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 10 — FREE BONUS
+         ============================================ -->
+    <section class="bonus-section section-padding" id="bonus">
+        <div class="container">
+            <div class="bonus-content">
+                <div class="bonus-badge animate-on-scroll">🎁 FREE BONUS</div>
+                <h2 class="bonus-headline animate-on-scroll">Order Today And Get This ₦15,000 Guide — Completely FREE</h2>
+                <p class="bonus-name animate-on-scroll">Male Potency &amp; Fertility Guide</p>
+                <div class="bonus-image animate-on-scroll">
+                    <img src="ebook-cover.jpg" alt="Male Potency & Fertility Guide - Free Bonus Ebook">
+                </div>
+                <ul class="bonus-list animate-on-scroll">
+                    <li>✔ The real cause of erectile dysfunction most men get wrong</li>
+                    <li>✔ Foods and habits silently killing your performance</li>
+                    <li>✔ Simple daily routines to boost testosterone and blood flow naturally</li>
+                    <li>✔ How to get strong, lasting erections without prescription drugs</li>
+                    <li>✔ Fertility-boosting secrets most men never learn</li>
+                </ul>
+                <p class="bonus-closing animate-on-scroll">Performax Coffee + this guide = faster, stronger, longer-lasting results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 11 — GUARANTEE
+         ============================================ -->
+    <section class="section-padding" id="guarantee">
+        <div class="container">
+            <h2 class="section-headline animate-on-scroll">You Either Love It Or You Don't Pay For It</h2>
+            <div class="guarantee-content animate-on-scroll">
+                <p>We are so confident in Performax Coffee that we're putting our money where our mouth is. If you use it as directed and see no improvement in your performance, stamina, or energy — simply contact us and we will give you a full refund. You keep the product. No questions asked. No hard feelings.</p>
+                <div class="guarantee-image">
+                    <img src="guarantee-badge.png" alt="100% Money-Back Guarantee Badge">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 12 — URGENCY
+         ============================================ -->
+    <section class="urgency-section section-padding" id="urgency">
+        <div class="container">
+            <div class="urgency-content animate-on-scroll">
+                <h2 class="urgency-headline">⚠️ Warning: Stock Is Running Low</h2>
+                <p>Over the last 3 months, demand for Performax Coffee has exploded. Men are ordering 2–3 packs at a time. Wives are ordering for their husbands. Friends are referring friends. We cannot guarantee this price or availability after today. If this page is still up, there are still packs available — but that could change before you finish reading.</p>
+                <a href="#pricing" class="cta-btn scroll-to-pricing">☕ Secure My Pack Before It's Gone</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 13 — FAQ
+         ============================================ -->
+    <section class="section-padding" id="faq">
+        <div class="container">
+            <h2 class="section-headline animate-on-scroll">Still Have Questions? We've Got Answers.</h2>
+            <div class="faq-list animate-on-scroll">
+
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-answer-1">
+                        <span>When will I start seeing results?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1">
+                        <p>You'll feel increased energy and better blood flow within 3 hours of your first cup. For lasting improvement in stamina and performance, most men notice a significant difference within 2–4 weeks of consistent use.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-answer-2">
+                        <span>When will my order arrive?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2">
+                        <p>Once confirmed, your order is processed and shipped within a few hours. Delivery typically takes 24–48 hours depending on your location in Nigeria. You'll receive a tracking code — and you don't pay until it arrives at your door.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-answer-3">
+                        <span>Is Performax Coffee safe?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3">
+                        <p>Yes. It's made from natural herbal ingredients including Korean Ginseng, Maca Root, and Tongkat Ali — no undeclared pharmaceuticals. It is NAFDAC-approved and produced under strict quality standards. As with any supplement, consult your doctor if you're on prescription medication for blood pressure, diabetes, or blood thinners.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-answer-4">
+                        <span>What if it doesn't work for me?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4">
+                        <p>We offer a 100% money-back guarantee. If you don't see results, contact us and we'll refund you in full. You even get to keep the product.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-btn-5" aria-expanded="false" aria-controls="faq-answer-5">
+                        <span>How do I use it?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-btn-5">
+                        <p>Empty one sachet into a cup, add hot water (150–200ml), stir, and drink. Take 2 sachets per week (with a 3–4 day gap between sachets). Best taken in the morning or 2–3 hours before intimate activity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-btn-6" aria-expanded="false" aria-controls="faq-answer-6">
+                        <span>Does it taste good?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-btn-6">
+                        <p>Yes — it has a rich, smooth coffee flavour with a mild herbal note. It's not bitter or medicinal-tasting. Most men look forward to it every morning.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-btn-7" aria-expanded="false" aria-controls="faq-answer-7">
+                        <span>Can I buy it in a store?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-7" role="region" aria-labelledby="faq-btn-7">
+                        <p>No. Performax Coffee is only sold through this official website to keep prices low, maintain quality control, and protect your privacy. If you see it sold elsewhere, it's a fake product.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 14 — FINAL CTA
+         ============================================ -->
+    <section class="section-padding final-cta" id="final-cta">
+        <div class="container">
+            <h2 class="section-headline animate-on-scroll">Your Best Performance Starts With One Cup</h2>
+            <p class="section-subtext animate-on-scroll">Free delivery. Pay on delivery. Money-back guarantee. What do you have to lose?</p>
+            <div class="animate-on-scroll">
+                <a href="#pricing" class="cta-btn scroll-to-pricing">☕ Order Performax Coffee Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 15 — FOOTER
+         ============================================ -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-text">
+                <p><em>This product is registered with NAFDAC. Results may vary. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before use if you have a medical condition.</em></p>
+                <p>© 2025 Performax Coffee. All Rights Reserved.</p>
+                <p>This site is not affiliated with Facebook™ or Meta™.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         ORDER FORM MODAL
+         ============================================ -->
+    <div class="modal-overlay" id="order-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close form">&times;</button>
+
+            <!-- Order Form -->
+            <div id="order-form-container">
+                <h3 class="modal-title">📦 Place Your Order</h3>
+                <p class="modal-subtitle">Fill in your details below. Pay on delivery — no upfront payment needed.</p>
+
+                <form id="performax-order-form" novalidate>
+                    <div class="form-group">
+                        <label class="form-label" for="full-name">Full Name <span class="required">*</span></label>
+                        <input type="text" class="form-input" id="full-name" name="entry.595495806" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="phone-number">Phone Number <span class="required">*</span></label>
+                            <input type="tel" class="form-input" id="phone-number" name="entry.17359113" placeholder="08012345678" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="whatsapp-number">WhatsApp Number <span class="required">*</span></label>
+                            <input type="tel" class="form-input" id="whatsapp-number" name="entry.108725885" placeholder="08012345678" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Choose Your Package <span class="required">*</span></label>
+                        <div class="package-options">
+                            <input type="radio" class="package-radio" id="pkg-regular" name="entry.446548634" value="REGULAR OFFER (1 Pack = ₦39500)" required>
+                            <label class="package-label" for="pkg-regular">
+                                <span class="package-dot"></span>
+                                <span class="package-label-text">
+                                    <span class="package-label-name">Regular Offer</span>
+                                    <span class="package-label-price">1 Pack — ₦39,500</span>
+                                </span>
+                            </label>
+
+                            <input type="radio" class="package-radio" id="pkg-double" name="entry.446548634" value="DOUBLE DEAL (2 Packs = ₦59500)">
+                            <label class="package-label" for="pkg-double">
+                                <span class="package-dot"></span>
+                                <span class="package-label-text">
+                                    <span class="package-label-name">Double Deal <span style="color: var(--accent-gold); font-size: 0.75rem;">MOST POPULAR</span></span>
+                                    <span class="package-label-price">2 Packs — ₦59,500</span>
+                                </span>
+                            </label>
+
+                            <input type="radio" class="package-radio" id="pkg-mega" name="entry.446548634" value="MEGA SAVER (3 packs + 1 = ₦92500)">
+                            <label class="package-label" for="pkg-mega">
+                                <span class="package-dot"></span>
+                                <span class="package-label-text">
+                                    <span class="package-label-name">Mega Saver</span>
+                                    <span class="package-label-price">3 Packs + 1 Free — ₦92,500</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="delivery-address">Delivery Address <span class="required">*</span></label>
+                        <textarea class="form-textarea" id="delivery-address" name="entry.253572886" placeholder="Enter your full delivery address" required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="city">City <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="city" name="entry.578825043" placeholder="e.g. Lagos" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="state">State <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="state" name="entry.755385611" placeholder="e.g. Lagos" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="shipping-time">When should we ship? <span class="required">*</span></label>
+                        <select class="form-select" id="shipping-time" name="entry.1459728145" required>
+                            <option value="" disabled selected>Select shipping preference</option>
+                            <option value="As soon as possible">As soon as possible</option>
+                            <option value="Within 24 hours">Within 24 hours</option>
+                            <option value="Within 2-3 days">Within 2–3 days</option>
+                            <option value="Next week">Next week</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn" id="form-submit-btn">🛒 Place My Order Now</button>
+                    <p class="form-trust-line">🔒 Your information is secure · 100% Money-Back Guarantee · Pay On Delivery</p>
+                </form>
+            </div>
+
+            <!-- Success State -->
+            <div id="order-success" style="display:none;">
+                <div class="form-success">
+                    <div class="form-success-icon">✅</div>
+                    <h3 class="form-success-title">Order Placed Successfully!</h3>
+                    <p class="form-success-text">Thank you! Your order has been received. Our team will contact you shortly on WhatsApp to confirm your delivery details.<br><br><strong>Expect a call or message within 1–2 hours.</strong></p>
+                    <button class="form-success-btn" id="close-success-btn">Got It — Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden iframe for Google Form submission -->
+    <iframe name="hidden-form-iframe" id="hidden-form-iframe" style="display:none;"></iframe>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            /* ----- Intersection Observer — Scroll Animations ----- */
+            var animElements = document.querySelectorAll('.animate-on-scroll');
+            var animObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        animObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            animElements.forEach(function(el) {
+                animObserver.observe(el);
+            });
+
+            /* ----- Counter Animation ----- */
+            var counterFired = false;
+            var counterSection = document.getElementById('counter-bar');
+            var counters = document.querySelectorAll('.counter-item-number');
+
+            function animateCounter(el) {
+                var target = parseInt(el.getAttribute('data-target'), 10);
+                var duration = 2000;
+                var start = 0;
+                var startTime = null;
+                var suffix = target > 100 ? '+' : '';
+
+                function update(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var progress = Math.min((timestamp - startTime) / duration, 1);
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    var current = Math.floor(eased * target);
+                    el.textContent = current.toLocaleString() + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        el.textContent = target.toLocaleString() + suffix;
+                    }
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            var counterObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting && !counterFired) {
+                        counterFired = true;
+                        counters.forEach(animateCounter);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            if (counterSection) {
+                counterObserver.observe(counterSection);
+            }
+
+            /* ----- FAQ Accordion ----- */
+            var faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(function(item) {
+                var btn = item.querySelector('.faq-question');
+                btn.addEventListener('click', function() {
+                    var isActive = item.classList.contains('active');
+                    faqItems.forEach(function(other) {
+                        other.classList.remove('active');
+                        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    });
+                    if (!isActive) {
+                        item.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            /* ----- Smooth Scroll for CTA Buttons ----- */
+            var scrollButtons = document.querySelectorAll('.scroll-to-pricing');
+            var topBar = document.getElementById('top-bar');
+
+            scrollButtons.forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var target = document.getElementById('pricing');
+                    if (target) {
+                        var offset = topBar ? topBar.offsetHeight + 16 : 16;
+                        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            /* ----- Order Form Modal ----- */
+            var modal = document.getElementById('order-modal');
+            var modalCloseBtn = document.getElementById('modal-close-btn');
+            var formContainer = document.getElementById('order-form-container');
+            var successContainer = document.getElementById('order-success');
+            var closeSuccessBtn = document.getElementById('close-success-btn');
+            var orderForm = document.getElementById('performax-order-form');
+            var submitBtn = document.getElementById('form-submit-btn');
+
+            var packageMap = {
+                'regular': 'pkg-regular',
+                'double': 'pkg-double',
+                'mega': 'pkg-mega'
+            };
+
+            // Open modal
+            function openModal(packageKey) {
+                // Reset to form view
+                formContainer.style.display = 'block';
+                successContainer.style.display = 'none';
+                submitBtn.disabled = false;
+                submitBtn.textContent = '🛒 Place My Order Now';
+
+                // Pre-select package
+                if (packageKey && packageMap[packageKey]) {
+                    var radio = document.getElementById(packageMap[packageKey]);
+                    if (radio) radio.checked = true;
+                }
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                // Focus first input after animation
+                setTimeout(function() {
+                    document.getElementById('full-name').focus();
+                }, 400);
+            }
+
+            // Close modal
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // Bind open buttons
+            var openBtns = document.querySelectorAll('.open-order-form');
+            openBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    openModal(btn.getAttribute('data-package'));
+                });
+            });
+
+            // Close handlers
+            modalCloseBtn.addEventListener('click', closeModal);
+            closeSuccessBtn.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) closeModal();
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            /* ----- Form Submission to Google Forms ----- */
+            var GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScnlATxXUDY6helHz9t6vR598a7KWepTPpcQjQP70EVKwWWKQ/formResponse';
+
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Basic validation
+                var valid = true;
+                var requiredFields = orderForm.querySelectorAll('[required]');
+                requiredFields.forEach(function(field) {
+                    if (!field.value || !field.value.trim()) {
+                        valid = false;
+                        field.style.borderColor = '#e74c3c';
+                        setTimeout(function() {
+                            field.style.borderColor = '';
+                        }, 3000);
+                    }
+                });
+
+                // Check radio
+                var packageSelected = orderForm.querySelector('input[name="entry.446548634"]:checked');
+                if (!packageSelected) {
+                    valid = false;
+                    var packageLabels = orderForm.querySelectorAll('.package-label');
+                    packageLabels.forEach(function(lbl) {
+                        lbl.style.borderColor = '#e74c3c';
+                        setTimeout(function() {
+                            lbl.style.borderColor = '';
+                        }, 3000);
+                    });
+                }
+
+                if (!valid) return;
+
+                // Disable button
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+
+                // Build form data and submit via hidden iframe
+                var formData = new FormData(orderForm);
+                var iframe = document.getElementById('hidden-form-iframe');
+
+                // Create a temporary form to submit to Google
+                var tempForm = document.createElement('form');
+                tempForm.method = 'POST';
+                tempForm.action = GOOGLE_FORM_URL;
+                tempForm.target = 'hidden-form-iframe';
+                tempForm.style.display = 'none';
+
+                formData.forEach(function(value, key) {
+                    var input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = key;
+                    input.value = value;
+                    tempForm.appendChild(input);
+                });
+
+                document.body.appendChild(tempForm);
+                tempForm.submit();
+
+                // Show success after a short delay (Google Forms doesn't return CORS-friendly responses)
+                setTimeout(function() {
+                    document.body.removeChild(tempForm);
+                    formContainer.style.display = 'none';
+                    successContainer.style.display = 'block';
+                    orderForm.reset();
+                }, 1500);
+            });
+
+        })();
+    </script>
+</body>
+</html>
