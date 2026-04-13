@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="hero-product.png" as="image">
 
     <style>
         /* ============================================
@@ -108,11 +109,11 @@
         .cta-btn {
             display: inline-block;
             width: 100%;
-            padding: 18px 32px;
+            padding: 16px 20px;
             background: var(--accent-gold);
             color: #000;
             font-family: var(--font-body);
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 700;
             text-align: center;
             border: none;
@@ -477,8 +478,8 @@
            ============================================ */
         .review-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            grid-template-columns: 1fr;
+            gap: 24px;
         }
 
         .review-screenshot {
@@ -1232,6 +1233,8 @@
             .cta-btn {
                 width: auto;
                 min-width: 360px;
+                padding: 18px 32px;
+                font-size: 1.05rem;
             }
 
             .pricing-card .cta-btn {
@@ -1287,6 +1290,90 @@
 
             .section-headline {
                 font-size: 2.4rem;
+            }
+        }
+        /* ============================================
+           SALES POPUP (SOCIAL PROOF)
+           ============================================ */
+        .sales-popup {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            background: var(--bg-secondary);
+            border: 1px solid rgba(201, 151, 58, 0.3);
+            border-radius: 12px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+            transform: translateY(150%);
+            opacity: 0;
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease;
+            pointer-events: none;
+            max-width: 320px;
+        }
+
+        .sales-popup.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .sales-popup-img img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--accent-gold);
+            background: #000;
+        }
+
+        .sales-popup-content p {
+            margin: 0;
+            font-size: 0.85rem;
+            line-height: 1.35;
+        }
+
+        .sales-popup-name {
+            color: var(--text-primary);
+        }
+        
+        .sales-popup-name strong {
+            color: var(--accent-gold);
+        }
+
+        .sales-popup-action {
+            color: var(--text-primary);
+        }
+
+        .sales-popup-time {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-top: 3px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .sales-popup-time::before {
+            content: "✓";
+            color: var(--whatsapp-green);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .sales-popup {
+                bottom: 16px;
+                left: 16px;
+                right: 16px;
+                max-width: none;
+                padding: 10px 14px;
+            }
+            .sales-popup-img img {
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
@@ -1479,9 +1566,9 @@
         <div class="container">
             <h2 class="section-headline animate-on-scroll">What Customers Are Saying Online</h2>
             <div class="review-grid animate-on-scroll">
-                <div class="review-screenshot">[REVIEW_SCREENSHOT_1]<br><small>Replace with screenshot</small></div>
-                <div class="review-screenshot">[REVIEW_SCREENSHOT_2]<br><small>Replace with screenshot</small></div>
-                <div class="review-screenshot">[REVIEW_SCREENSHOT_3]<br><small>Replace with screenshot</small></div>
+                <div class="review-screenshot animate-on-scroll" style="padding: 0;"><img src="review-1.jpg" alt="WhatsApp Customer Review 1" loading="lazy"></div>
+                <div class="review-screenshot animate-on-scroll" style="padding: 0;"><img src="review-2.jpg" alt="WhatsApp Customer Review 2" loading="lazy"></div>
+                <div class="review-screenshot animate-on-scroll" style="padding: 0;"><img src="review-3.jpg" alt="WhatsApp Customer Review 3" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -2074,6 +2161,63 @@
                 }, 1500);
             });
 
+        })();
+    </script>
+    <!-- ============================================
+         SALES POPUP HTML
+         ============================================ -->
+    <div id="sales-popup" class="sales-popup">
+        <div class="sales-popup-img">
+            <img src="hero-product.png" alt="Performax Coffee Buyer">
+        </div>
+        <div class="sales-popup-content">
+            <p class="sales-popup-name"><strong>Chukwudi</strong> from <strong>Lagos</strong></p>
+            <p class="sales-popup-action">just ordered <strong>2 Packs</strong></p>
+            <p class="sales-popup-time">2 minutes ago</p>
+        </div>
+    </div>
+
+    <!-- SALES POPUP JS -->
+    <script>
+        (function() {
+            var names = ['Chukwudi', 'Emeka', 'Ibrahim', 'Oluwaseun', 'Abubakar', 'Adeyemi', 'Chinedu', 'Tunde', 'Nnamdi', 'Obinna', 'Bayo', 'Femi', 'Kelechi', 'Musa', 'Sunday', 'Uche', 'Ayo', 'Olumide', 'Segun', 'Idris', 'Kenneth', 'Victor'];
+            var locations = ['Lagos', 'Abuja', 'Port Harcourt', 'Kano', 'Ibadan', 'Enugu', 'Owerri', 'Kaduna', 'Asaba', 'Uyo', 'Jos', 'Aba', 'Warri', 'Calabar', 'Ilorin'];
+            var packages = ['1 Pack', '2 Packs', '2 Packs', 'Buy 3 Get 1 FREE', '2 Packs']; // Weighted for 2 Packs
+
+            function showSalesPopup() {
+                var popup = document.getElementById('sales-popup');
+                if(!popup) return;
+
+                var randomName = names[Math.floor(Math.random() * names.length)];
+                var randomLocation = locations[Math.floor(Math.random() * locations.length)];
+                var randomPkg = packages[Math.floor(Math.random() * packages.length)];
+                var randomTime = Math.floor(Math.random() * 18) + 1;
+
+                popup.querySelector('.sales-popup-name').innerHTML = '<strong>' + randomName + '</strong> from <strong>' + randomLocation + '</strong>';
+                popup.querySelector('.sales-popup-action').innerHTML = 'just ordered <strong>' + randomPkg + '</strong>';
+                popup.querySelector('.sales-popup-time').innerText = randomTime + (randomTime === 1 ? ' minute' : ' minutes') + ' ago';
+
+                popup.classList.add('show');
+
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                }, 5000); // Hide after 5 seconds
+            }
+
+            function scheduleNextPopup() {
+                // Random time between 15 seconds and 35 seconds
+                var delay = Math.floor(Math.random() * 20000) + 15000;
+                setTimeout(function() {
+                    showSalesPopup();
+                    scheduleNextPopup();
+                }, delay);
+            }
+
+            // Start popup loop shortly after page load
+            setTimeout(function() {
+                showSalesPopup();
+                scheduleNextPopup();
+            }, 6000); // Wait 6 seconds before first popup
         })();
     </script>
 </body>
