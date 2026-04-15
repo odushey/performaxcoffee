@@ -2044,6 +2044,11 @@
         </div>
     </div>
 
+    <!-- MOBILE STICKY FOOTER CTA -->
+    <div class="mobile-sticky-cta">
+        <button class="cta-btn open-order-form" data-package="regular">👉 Order Your Coffee Now</button>
+    </div>
+
     <!-- Hidden iframe for Google Form submission -->
     <iframe name="hidden-form-iframe" id="hidden-form-iframe" style="display:none;"></iframe>
 
@@ -2323,8 +2328,8 @@
             }
 
             function scheduleNextPopup() {
-                // Random time between 15 seconds and 35 seconds
-                var delay = Math.floor(Math.random() * 20000) + 15000;
+                // Random time between 35 seconds and 75 seconds
+                var delay = Math.floor(Math.random() * 40000) + 35000;
                 setTimeout(function() {
                     showSalesPopup();
                     scheduleNextPopup();
@@ -2347,9 +2352,6 @@
         </svg>
     </a>
 
-    <!-- MOBILE STICKY FOOTER CTA -->
-    <div class="mobile-sticky-cta">
-        <button class="cta-btn open-order-form">👉 Order Your Coffee Now</button>
-    </div>
+
 </body>
 </html>
