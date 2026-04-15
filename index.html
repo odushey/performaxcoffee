@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Performax Coffee — Restore Your Stamina, Confidence &amp; Performance</title>
-    <meta name="description" content="Performax Coffee is the NAFDAC-approved herbal coffee that restores stamina, hardens erections, and puts you back in control. Free delivery across Nigeria.">
-    <meta property="og:title" content="Performax Coffee — Restore Your Stamina, Confidence & Performance">
-    <meta property="og:description" content="NAFDAC-approved herbal coffee for men. Restore stamina, confidence, and performance starting from your very first cup.">
-    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Performax Coffee | Best Men's Herbal Libido Booster & Stamina Coffee in Nigeria</title>
+    <meta name="description" content="Performax is a NAFDAC-approved natural herbal coffee for men in Nigeria. Safely cure weak erections, stop premature ejaculation, and boost your stamina instantly. Order now for free delivery!">
+    <meta name="keywords" content="Performax coffee, herbal coffee for men Nigeria, cure weak erection, stop premature ejaculation, natural libido booster, lasting power for men, strong erection coffee">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Performax Coffee | Instantly Restore Your Stamina & Confidence">
+    <meta property="og:description" content="Tired of finishing quickly? Performax is Nigeria's trusted, NAFDAC-approved herbal coffee for strong, lasting performance. See results in 3 hours.">
+    <meta property="og:type" content="product">
+    <meta property="og:image" content="https://i.ibb.co/680pZcw/hero-product.jpg">
+    <meta property="og:url" content="https://performaxcoffee.com.ng">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
@@ -47,6 +55,11 @@
             line-height: 1.7;
             font-size: 16px;
             overflow-x: hidden;
+        }
+
+        .text-gold {
+            color: var(--accent-gold);
+            font-weight: 700;
         }
 
         img {
@@ -437,7 +450,7 @@
 
         .video-wrapper {
             width: 100%;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 9 / 16;
             background: #000;
             display: flex;
             align-items: center;
@@ -452,6 +465,38 @@
         .video-wrapper iframe {
             width: 100%;
             height: 100%;
+        }
+
+        .standalone-video-ad {
+            width: 100%;
+            max-width: 340px;
+            margin: 40px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5), 0 0 30px rgba(201, 151, 58, 0.15);
+            border: 2px solid rgba(201, 151, 58, 0.3);
+            aspect-ratio: 9 / 16;
+            display: flex;
+            position: relative;
+        }
+        
+        /* INVISIBLE SHIELD: Blocks clicks on the Google Drive "Pop-out" button */
+        .video-wrapper::after,
+        .standalone-video-ad::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 60px;
+            background: transparent;
+            z-index: 10;
+        }
+        
+        .standalone-video-ad iframe {
+            width: 100%;
+            height: 100%;
+        }
             object-fit: cover;
         }
 
@@ -1214,7 +1259,7 @@
             }
 
             .video-cards {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .review-grid {
@@ -1363,17 +1408,66 @@
             font-weight: bold;
         }
 
+        /* ============================================
+           FLOATING WHATSAPP BUTTON & MOBILE ADJUSTMENTS
+           ============================================ */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--whatsapp-green);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 10000;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .floating-whatsapp svg {
+            width: 34px;
+            height: 34px;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            animation: none;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
         @media (max-width: 768px) {
             .sales-popup {
-                bottom: 16px;
+                bottom: 20px;
                 left: 16px;
-                right: 16px;
-                max-width: none;
+                right: auto;
+                max-width: calc(100vw - 90px);
                 padding: 10px 14px;
             }
             .sales-popup-img img {
-                width: 40px;
-                height: 40px;
+                width: 36px;
+                height: 36px;
+            }
+            .floating-whatsapp {
+                bottom: 20px;
+                right: 16px;
+                width: 55px;
+                height: 55px;
+            }
+            .floating-whatsapp svg {
+                width: 30px;
+                height: 30px;
             }
         }
     </style>
@@ -1397,8 +1491,8 @@
             <div class="hero-grid">
                 <div class="hero-content animate-on-scroll">
                     <p class="hero-preheadline">FOR MEN WHO WANT THEIR CONFIDENCE BACK</p>
-                    <h1 class="hero-headline">Your Woman Is Tired Of Excuses.<br>It's Time To Give Her A Reason To Stay.</h1>
-                    <p class="hero-subheadline">Performax Coffee is the NAFDAC-approved herbal coffee that restores your stamina, hardens your erections, and puts you back in control — starting from your very first cup.</p>
+                    <h1 class="hero-headline">Your Woman Is Tired Of Excuses.<br>It's Time To Give Her <span class="text-gold">A Reason To Stay</span>.</h1>
+                    <p class="hero-subheadline">Performax Coffee is the NAFDAC-approved herbal coffee that <span class="text-gold">restores your stamina</span>, <span class="text-gold">hardens your erections</span>, and <span class="text-gold">puts you back in control</span> — starting from your very first cup.</p>
                     <div class="hero-cta">
                         <a href="#pricing" class="cta-btn scroll-to-pricing">☕ I Want To Perform Again — Show Me The Packages</a>
                     </div>
@@ -1417,20 +1511,29 @@
     </section>
 
     <!-- ============================================
+         STANDALONE AD 1
+         ============================================ -->
+    <div class="container animate-on-scroll">
+        <div class="standalone-video-ad">
+            <iframe src="https://drive.google.com/file/d/12-N1bTAjGcywvXzjkHpStSVMACgNAgpV/preview" frameborder="0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- ============================================
          SECTION 3 — PAIN AGITATION
          ============================================ -->
     <section class="pain-section section-padding" id="pain">
         <div class="container">
             <h2 class="section-headline animate-on-scroll">If Any Of This Sounds Familiar, Keep Reading...</h2>
             <ul class="pain-list animate-on-scroll">
-                <li>❌ You finish in 2 minutes and pretend it didn't happen</li>
-                <li>❌ Your partner has stopped initiating because she knows what to expect</li>
-                <li>❌ You avoid intimacy altogether to dodge the shame</li>
-                <li>❌ You've tried "agbo", supplements, and vitamins — nothing lasted</li>
-                <li>❌ Deep down, you're terrified she'll find satisfaction somewhere else</li>
-                <li>❌ You feel like less of a man than you used to be</li>
+                <li>❌ You <span class="text-gold">finish in 2 minutes</span> and pretend it didn't happen</li>
+                <li>❌ Your partner has <span class="text-gold">stopped initiating</span> because she knows what to expect</li>
+                <li>❌ You <span class="text-gold">avoid intimacy</span> altogether to dodge the shame</li>
+                <li>❌ You've tried "agbo", supplements, and vitamins — <span class="text-gold">nothing lasted</span></li>
+                <li>❌ Deep down, you're <span class="text-gold">terrified</span> she'll find satisfaction somewhere else</li>
+                <li>❌ You feel like <span class="text-gold">less of a man</span> than you used to be</li>
             </ul>
-            <p class="pain-closing animate-on-scroll"><em>You didn't choose this. But you can choose what happens next.</em></p>
+            <p class="pain-closing animate-on-scroll"><em>You didn't choose this. But you can <span class="text-gold">choose what happens next</span>.</em></p>
             <p class="pain-transition animate-on-scroll">Performax Coffee was made for exactly this moment.</p>
         </div>
     </section>
@@ -1442,9 +1545,9 @@
         <div class="container">
             <h2 class="section-headline animate-on-scroll">What Is Performax Coffee?</h2>
             <div class="product-intro-text animate-on-scroll">
-                <p>Performax Coffee is not a drug. It's not a quick fix that wrecks your body. It's a premium blend of natural herbs — including Korean Ginseng, Maca Root, and Tongkat Ali — scientifically known to boost testosterone, increase blood flow, and restore sexual stamina in men.</p>
-                <p>It looks like coffee. It tastes like coffee. But it works like nothing you've ever tried.</p>
-                <p>Within 3 hours of your first cup, you'll feel the difference. Within 2–4 weeks of consistent use, your partner will notice the difference.</p>
+                <p>Performax Coffee is not a drug. It's not a quick fix that wrecks your body. It's a premium blend of natural herbs — including Korean Ginseng, Maca Root, and Tongkat Ali — scientifically known to boost testosterone, <span class="text-gold">increase blood flow</span>, and <span class="text-gold">restore sexual stamina</span> in men.</p>
+                <p>It looks like coffee. It tastes like coffee. But it <span class="text-gold">works like nothing you've ever tried</span>.</p>
+                <p><span class="text-gold">Within 3 hours</span> of your first cup, you'll feel the difference. Within <span class="text-gold">2–4 weeks</span> of consistent use, your partner will notice the difference.</p>
             </div>
             <div class="product-intro-image animate-on-scroll">
                 <img src="product-detail.png" alt="Performax Coffee Product Packaging" style="width: 100%; max-width: 600px; margin: 0 auto; border-radius: 8px; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.5));">
@@ -1506,53 +1609,31 @@
                 <!-- Video Card 1 -->
                 <div class="video-card animate-on-scroll">
                     <div class="video-wrapper">
-                        <!-- Replace with: <video controls playsinline src="[VIDEO_LINK_1]" poster="[THUMBNAIL_1]"></video> -->
-                        <!-- Or for YouTube: <iframe src="[VIDEO_LINK_1]" frameborder="0" allowfullscreen></iframe> -->
-                        [VIDEO_LINK_1] / [THUMBNAIL_1]
+                        <iframe src="https://drive.google.com/file/d/1XeGCaeT5wCjZ6PpUddHnzyFdknZ05Gx8/preview" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="video-card-body">
-                        <div class="video-card-name">Mr. Adekule</div>
-                        <p class="video-card-quote">"Wonderful coffee — that's what we're supposed to call it, because..."</p>
+                        <div class="video-card-name">Mr Suleiman Adebayo Abudulkareem</div>
+                        <p class="video-card-quote">"Immediately I used this coffee, I became a master in my bedroom again."</p>
                     </div>
                 </div>
                 <!-- Video Card 2 -->
                 <div class="video-card animate-on-scroll">
                     <div class="video-wrapper">
-                        [VIDEO_LINK_2] / [THUMBNAIL_2]
+                        <iframe src="https://drive.google.com/file/d/1Om5z09guEX5lgrt47us4ecNvGkS61Ji3/preview" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="video-card-body">
-                        <div class="video-card-name">Mr. Abdulwahab Yusuf</div>
+                        <div class="video-card-name">Verified Buyer</div>
                         <p class="video-card-quote">"I can vouch for it. It genuinely works."</p>
                     </div>
                 </div>
                 <!-- Video Card 3 -->
                 <div class="video-card animate-on-scroll">
                     <div class="video-wrapper">
-                        [VIDEO_LINK_3] / [THUMBNAIL_3]
+                        <iframe src="https://drive.google.com/file/d/1THzz13unVXaRkS2OMy9quPu9HDIgFxEm/preview" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="video-card-body">
-                        <div class="video-card-name">Mrs. Oluwatosin Afolayan</div>
-                        <p class="video-card-quote">"I bought it for my husband. It saved our marriage."</p>
-                    </div>
-                </div>
-                <!-- Video Card 4 -->
-                <div class="video-card animate-on-scroll">
-                    <div class="video-wrapper">
-                        [VIDEO_LINK_4] / [THUMBNAIL_4]
-                    </div>
-                    <div class="video-card-body">
-                        <div class="video-card-name">Ibrahim Babatunde</div>
-                        <p class="video-card-quote">"Now I dey spend 15 minutes. Your babe go dey beg you — small small."</p>
-                    </div>
-                </div>
-                <!-- Video Card 5 -->
-                <div class="video-card animate-on-scroll">
-                    <div class="video-wrapper">
-                        [VIDEO_LINK_5] / [THUMBNAIL_5]
-                    </div>
-                    <div class="video-card-body">
-                        <div class="video-card-name">Biodun Adeleke</div>
-                        <p class="video-card-quote">"When I used it for the first time... I couldn't believe it."</p>
+                        <div class="video-card-name">Mr. Adekule</div>
+                        <p class="video-card-quote">"Wonderful coffee — that's what we're supposed to call it."</p>
                     </div>
                 </div>
             </div>
@@ -1598,6 +1679,15 @@
             </div>
         </div>
     </section>
+
+    <!-- ============================================
+         STANDALONE AD 2
+         ============================================ -->
+    <div class="container animate-on-scroll">
+        <div class="standalone-video-ad" style="margin-bottom: 60px;">
+            <iframe src="https://drive.google.com/file/d/1JwVHEs8F5-3Mh79SBLNaTFDg-ur6cuO1/preview" frameborder="0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
 
     <!-- ============================================
          SECTION 9 — PRICING / PACKAGES
@@ -2220,5 +2310,13 @@
             }, 6000); // Wait 6 seconds before first popup
         })();
     </script>
+    <!-- ============================================
+         FLOATING WHATSAPP BUTTON HTML
+         ============================================ -->
+    <a href="https://wa.me/2349067370007?text=Hello,%20I%20have%20a%20question%20about%20Performax%20Coffee" target="_blank" class="floating-whatsapp" aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+        </svg>
+    </a>
 </body>
 </html>
