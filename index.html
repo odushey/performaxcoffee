@@ -910,79 +910,15 @@
         /* ============================================
            ORDER FORM MODAL
            ============================================ */
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(6px);
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.35s ease, visibility 0.35s ease;
-            padding: 16px;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-content {
+        .order-form-wrapper {
             background: var(--bg-secondary);
             border: 1px solid rgba(201, 151, 58, 0.25);
             border-radius: 16px;
             width: 100%;
-            max-width: 520px;
-            max-height: 90vh;
-            overflow-y: auto;
+            max-width: 600px;
+            margin: 0 auto;
             padding: 32px 24px;
-            position: relative;
-            transform: translateY(30px) scale(0.97);
-            transition: transform 0.35s ease;
-        }
-
-        .modal-overlay.active .modal-content {
-            transform: translateY(0) scale(1);
-        }
-
-        .modal-content::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .modal-content::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .modal-content::-webkit-scrollbar-thumb {
-            background: rgba(201, 151, 58, 0.3);
-            border-radius: 3px;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            width: 36px;
-            height: 36px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.2s ease, color 0.2s ease;
-            line-height: 1;
-        }
-
-        .modal-close:hover {
-            background: rgba(255, 255, 255, 0.12);
-            color: var(--text-primary);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
         .modal-title {
@@ -1452,6 +1388,9 @@
         }
 
         @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
             body {
                 padding-bottom: 85px; /* Space for sticky CTA */
             }
@@ -1819,6 +1758,111 @@
     </section>
 
     <!-- ============================================
+         ORDER FORM SECTION
+         ============================================ -->
+    <section class="section-padding" id="order-section" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="order-form-wrapper">
+
+            <!-- Order Form -->
+            <div id="order-form-container">
+                <h3 class="modal-title">📦 Place Your Order</h3>
+                <p class="modal-subtitle">Fill in your details below. Pay on delivery — no upfront payment needed.</p>
+
+                <form id="performax-order-form" novalidate>
+                    <div class="form-group">
+                        <label class="form-label" for="full-name">Full Name <span class="required">*</span></label>
+                        <input type="text" class="form-input" id="full-name" name="entry.595495806" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="phone-number">Phone Number <span class="required">*</span></label>
+                            <input type="tel" class="form-input" id="phone-number" name="entry.17359113" placeholder="08012345678" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="whatsapp-number">WhatsApp Number <span class="required">*</span></label>
+                            <input type="tel" class="form-input" id="whatsapp-number" name="entry.108725885" placeholder="08012345678" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Choose Your Package <span class="required">*</span></label>
+                        <div class="package-options">
+                            <input type="radio" class="package-radio" id="pkg-regular" name="entry.446548634" value="REGULAR OFFER (1 Pack = ₦39500)" required>
+                            <label class="package-label" for="pkg-regular">
+                                <span class="package-dot"></span>
+                                <span class="package-label-text">
+                                    <span class="package-label-name">Regular Offer</span>
+                                    <span class="package-label-price">1 Pack — ₦39,500</span>
+                                </span>
+                            </label>
+
+                            <input type="radio" class="package-radio" id="pkg-double" name="entry.446548634" value="DOUBLE DEAL (2 Packs = ₦59500)">
+                            <label class="package-label" for="pkg-double">
+                                <span class="package-dot"></span>
+                                <span class="package-label-text">
+                                    <span class="package-label-name">Double Deal <span style="color: var(--accent-gold); font-size: 0.75rem;">MOST POPULAR</span></span>
+                                    <span class="package-label-price">2 Packs — ₦59,500</span>
+                                </span>
+                            </label>
+
+                            <input type="radio" class="package-radio" id="pkg-mega" name="entry.446548634" value="MEGA SAVER (3 packs + 1 = ₦92500)">
+                            <label class="package-label" for="pkg-mega">
+                                <span class="package-dot"></span>
+                                <span class="package-label-text">
+                                    <span class="package-label-name">Mega Saver</span>
+                                    <span class="package-label-price">3 Packs + 1 Free — ₦92,500</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="delivery-address">Delivery Address <span class="required">*</span></label>
+                        <textarea class="form-textarea" id="delivery-address" name="entry.253572886" placeholder="Enter your full delivery address" required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="city">City <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="city" name="entry.578825043" placeholder="e.g. Lagos" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="state">State <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="state" name="entry.755385611" placeholder="e.g. Lagos" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="shipping-time">When should we ship? <span class="required">*</span></label>
+                        <select class="form-select" id="shipping-time" name="entry.1459728145" required>
+                            <option value="" disabled selected>Select shipping preference</option>
+                            <option value="As soon as possible">As soon as possible</option>
+                            <option value="Within 24 hours">Within 24 hours</option>
+                            <option value="Within 2-3 days">Within 2–3 days</option>
+                            <option value="Next week">Next week</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn" id="form-submit-btn">🛒 Place My Order Now</button>
+                    <p class="form-trust-line">🔒 Your information is secure · 100% Money-Back Guarantee · Pay On Delivery</p>
+                </form>
+            </div>
+
+            <!-- Success State -->
+            <div id="order-success" style="display:none;">
+                <div class="form-success">
+                    <div class="form-success-icon">✅</div>
+                    <h3 class="form-success-title">Order Placed Successfully!</h3>
+                    <p class="form-success-text">Thank you! Your order has been received. Our team will contact you shortly on WhatsApp to confirm your delivery details.<br><br><strong>Expect a call or message within 1–2 hours.</strong></p>
+                    <button class="form-success-btn" id="close-success-btn">Submit Another Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
          SECTION 12 — URGENCY
          ============================================ -->
     <section class="urgency-section section-padding" id="urgency">
@@ -1939,111 +1983,6 @@
         </div>
     </footer>
 
-    <!-- ============================================
-         ORDER FORM MODAL
-         ============================================ -->
-    <div class="modal-overlay" id="order-modal">
-        <div class="modal-content">
-            <button class="modal-close" id="modal-close-btn" aria-label="Close form">&times;</button>
-
-            <!-- Order Form -->
-            <div id="order-form-container">
-                <h3 class="modal-title">📦 Place Your Order</h3>
-                <p class="modal-subtitle">Fill in your details below. Pay on delivery — no upfront payment needed.</p>
-
-                <form id="performax-order-form" novalidate>
-                    <div class="form-group">
-                        <label class="form-label" for="full-name">Full Name <span class="required">*</span></label>
-                        <input type="text" class="form-input" id="full-name" name="entry.595495806" placeholder="Enter your full name" required>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="phone-number">Phone Number <span class="required">*</span></label>
-                            <input type="tel" class="form-input" id="phone-number" name="entry.17359113" placeholder="08012345678" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="whatsapp-number">WhatsApp Number <span class="required">*</span></label>
-                            <input type="tel" class="form-input" id="whatsapp-number" name="entry.108725885" placeholder="08012345678" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Choose Your Package <span class="required">*</span></label>
-                        <div class="package-options">
-                            <input type="radio" class="package-radio" id="pkg-regular" name="entry.446548634" value="REGULAR OFFER (1 Pack = ₦39500)" required>
-                            <label class="package-label" for="pkg-regular">
-                                <span class="package-dot"></span>
-                                <span class="package-label-text">
-                                    <span class="package-label-name">Regular Offer</span>
-                                    <span class="package-label-price">1 Pack — ₦39,500</span>
-                                </span>
-                            </label>
-
-                            <input type="radio" class="package-radio" id="pkg-double" name="entry.446548634" value="DOUBLE DEAL (2 Packs = ₦59500)">
-                            <label class="package-label" for="pkg-double">
-                                <span class="package-dot"></span>
-                                <span class="package-label-text">
-                                    <span class="package-label-name">Double Deal <span style="color: var(--accent-gold); font-size: 0.75rem;">MOST POPULAR</span></span>
-                                    <span class="package-label-price">2 Packs — ₦59,500</span>
-                                </span>
-                            </label>
-
-                            <input type="radio" class="package-radio" id="pkg-mega" name="entry.446548634" value="MEGA SAVER (3 packs + 1 = ₦92500)">
-                            <label class="package-label" for="pkg-mega">
-                                <span class="package-dot"></span>
-                                <span class="package-label-text">
-                                    <span class="package-label-name">Mega Saver</span>
-                                    <span class="package-label-price">3 Packs + 1 Free — ₦92,500</span>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="delivery-address">Delivery Address <span class="required">*</span></label>
-                        <textarea class="form-textarea" id="delivery-address" name="entry.253572886" placeholder="Enter your full delivery address" required></textarea>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="city">City <span class="required">*</span></label>
-                            <input type="text" class="form-input" id="city" name="entry.578825043" placeholder="e.g. Lagos" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="state">State <span class="required">*</span></label>
-                            <input type="text" class="form-input" id="state" name="entry.755385611" placeholder="e.g. Lagos" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="shipping-time">When should we ship? <span class="required">*</span></label>
-                        <select class="form-select" id="shipping-time" name="entry.1459728145" required>
-                            <option value="" disabled selected>Select shipping preference</option>
-                            <option value="As soon as possible">As soon as possible</option>
-                            <option value="Within 24 hours">Within 24 hours</option>
-                            <option value="Within 2-3 days">Within 2–3 days</option>
-                            <option value="Next week">Next week</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="form-submit-btn" id="form-submit-btn">🛒 Place My Order Now</button>
-                    <p class="form-trust-line">🔒 Your information is secure · 100% Money-Back Guarantee · Pay On Delivery</p>
-                </form>
-            </div>
-
-            <!-- Success State -->
-            <div id="order-success" style="display:none;">
-                <div class="form-success">
-                    <div class="form-success-icon">✅</div>
-                    <h3 class="form-success-title">Order Placed Successfully!</h3>
-                    <p class="form-success-text">Thank you! Your order has been received. Our team will contact you shortly on WhatsApp to confirm your delivery details.<br><br><strong>Expect a call or message within 1–2 hours.</strong></p>
-                    <button class="form-success-btn" id="close-success-btn">Got It — Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- MOBILE STICKY FOOTER CTA -->
     <div class="mobile-sticky-cta">
         <button class="cta-btn open-order-form" data-package="regular">👉 Order Your Coffee Now</button>
@@ -2149,9 +2088,7 @@
                 });
             });
 
-            /* ----- Order Form Modal ----- */
-            var modal = document.getElementById('order-modal');
-            var modalCloseBtn = document.getElementById('modal-close-btn');
+            /* ----- Order Form JS ----- */
             var formContainer = document.getElementById('order-form-container');
             var successContainer = document.getElementById('order-success');
             var closeSuccessBtn = document.getElementById('close-success-btn');
@@ -2164,9 +2101,9 @@
                 'mega': 'pkg-mega'
             };
 
-            // Open modal
-            function openModal(packageKey) {
-                // Reset to form view
+            // Scroll to order form
+            function scrollToOrder(packageKey) {
+                // Reset to form view if success was showing
                 formContainer.style.display = 'block';
                 successContainer.style.display = 'none';
                 submitBtn.disabled = false;
@@ -2178,41 +2115,34 @@
                     if (radio) radio.checked = true;
                 }
 
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-
-                // Focus first input after animation
+                // Smooth scroll to the form section
+                var target = document.getElementById('order-section');
+                if (target) {
+                    var topBar = document.getElementById('top-bar');
+                    var offset = topBar ? topBar.offsetHeight + 16 : 16;
+                    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+                
                 setTimeout(function() {
                     document.getElementById('full-name').focus();
-                }, 400);
-            }
-
-            // Close modal
-            function closeModal() {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
+                }, 800);
             }
 
             // Bind open buttons
             var openBtns = document.querySelectorAll('.open-order-form');
             openBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    openModal(btn.getAttribute('data-package'));
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    scrollToOrder(btn.getAttribute('data-package'));
                 });
             });
 
-            // Close handlers
-            modalCloseBtn.addEventListener('click', closeModal);
-            closeSuccessBtn.addEventListener('click', closeModal);
-
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) closeModal();
-            });
-
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    closeModal();
-                }
+            // Close handlers for success screen (now just reset form)
+            closeSuccessBtn.addEventListener('click', function() {
+                formContainer.style.display = 'block';
+                successContainer.style.display = 'none';
+                orderForm.reset();
             });
 
             /* ----- Form Submission to Google Forms ----- */
